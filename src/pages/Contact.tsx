@@ -60,8 +60,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1 text-lg">Visit Our Yard</h3>
                     <p className="text-gray-600 mb-2">
-                      123 Garden Way<br />
-                      Landscape City, LC 12345
+                      163 Hwy 5 West<br />
+                      Dundas, ON L9H 5E2
                     </p>
                     <p className="text-sm text-gray-500">
                       Located in the heart of the landscaping district with easy access and ample parking.
@@ -75,7 +75,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1 text-lg">Call Us</h3>
-                    <p className="text-gray-600 mb-2">(555) 123-4567</p>
+                    <p className="text-gray-600 mb-2">(905) 689-8787</p>
                     <p className="text-sm text-gray-500">
                       Speak directly with our knowledgeable staff for immediate assistance.
                     </p>
@@ -88,7 +88,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1 text-lg">Email Us</h3>
-                    <p className="text-gray-600 mb-2">info@greenscapesupply.com</p>
+                    <p className="text-gray-600 mb-2">info@thedirtdepot.com</p>
                     <p className="text-sm text-gray-500">
                       Send us your questions or project details for a detailed response.
                     </p>
@@ -102,9 +102,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1 text-lg">Business Hours</h3>
                     <div className="text-gray-600 space-y-1">
-                      <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
+                      <p>Monday - Friday: 7:00 AM - 5:00 PM</p>
                       <p>Saturday: 8:00 AM - 5:00 PM</p>
-                      <p>Sunday: 9:00 AM - 4:00 PM</p>
+                      <p>Sunday: CLOSED</p>
                     </div>
                   </div>
                 </div>
@@ -259,7 +259,7 @@ const Contact = () => {
               <MapPin className="w-16 h-16 text-green-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Visit Our Supply Yard</h3>
               <p className="text-gray-600 mb-4">
-                123 Garden Way, Landscape City, LC 12345
+                163 Hwy 5 West, Dundas, ON L9H 5E2
               </p>
               <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                 Get Directions
@@ -281,7 +281,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
-              Call (555) 123-4567
+              Call (905) 689-8787
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-700 transition-colors">
               Request Quote

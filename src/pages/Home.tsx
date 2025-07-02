@@ -48,7 +48,7 @@ const Home = () => {
                   <Truck className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-lg">Free Delivery</h3>
+                  <h3 className="text-white font-semibold text-lg">Flat-Rate Delivery</h3>
                   <p className="text-green-200">On orders over $200</p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose GreenScape Supply?
+              Why Choose The Dirt Depot?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               With over 25 years of experience, we're your trusted partner for premium landscape materials 

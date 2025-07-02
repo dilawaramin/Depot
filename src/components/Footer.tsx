@@ -11,10 +11,10 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">G</span>
+                <span className="text-white font-bold text-xl">D</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">GreenScape Supply</h3>
+                <h3 className="text-xl font-bold">The Dirt Depot</h3>
                 <p className="text-sm text-gray-400">Premium Landscape Materials</p>
               </div>
             </div>

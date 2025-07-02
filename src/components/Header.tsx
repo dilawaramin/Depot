@@ -27,10 +27,10 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-green-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">G</span>
+              <span className="text-white font-bold text-xl">D</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">GreenScape Supply</h1>
+              <h1 className="text-xl font-bold text-gray-900">The Dirt Depot</h1>
               <p className="text-sm text-gray-600">Premium Landscape Materials</p>
             </div>
           </Link>
@@ -81,11 +81,11 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="w-4 h-4" />
-              <span>(555) 123-4567</span>
+              <span>(905) 689-8787</span>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <MapPin className="w-4 h-4" />
-              <span>123 Garden Way</span>
+              <span>163 Hwy 5 West</span>
             </div>
           </div>
 
