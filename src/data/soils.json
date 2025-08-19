@@ -1,0 +1,50 @@
+[
+  {
+    "type": "soil",
+    "title": "TOPSOIL",
+    "description": "Just plain screened dirt. Great for filling holes and using under sod.",
+    "image": "/images/Premium-Topsoil.jpg"
+  },
+  {
+    "type": "soil",
+    "title": "TRIPLE MIX",
+    "description": "Topsoil with compost and sand. A good soil for container gardening and garden beds.",
+    "image": "/images/triple-2.jpg"
+  },
+  {
+    "type": "soil",
+    "title": "GRO‑MAX",
+    "description": "Leaf & Yard compost, bark fines and peat moss. Great for flower gardens, shrubs and trees.",
+    "image": "/images/586bd5ace8fdf2ad6bb31cab_Gro-Max-p-500x333-1.jpeg"
+  },
+  {
+    "type": "soil",
+    "title": "GRO‑TURF",
+    "description": "Composted pine bark, leaf & yard compost, coconut coir and sand. The best soil for overseeding. Formulated for growth and thatch breakdown.",
+    "image": "/images/586bda8a844ff847297a3ea6_Gro-Turf-p-500x333-1.jpeg"
+  },
+  {
+    "type": "soil",
+    "title": "BLACK LOAM",
+    "description": "Marshy black earth soil. Used for top dressing.",
+    "image": "/images/Black-Loam-1-1024x576.png"
+  },
+  {
+    "type": "soil",
+    "title": "GARDEN DELUXE",
+    "description": "Triple mix, black loam, peat moss and added compost. The BEST garden soil ever. No supplemental fertilizer is needed.",
+    "image": "/images/deluxe.jpg"
+  },
+  {
+    "type": "soil",
+    "title": "BLACK GOLD",
+    "description": "Composted horse manure (that’s it!). A great soil amendment.",
+    "image": "/images/manu.jpg"
+  },
+  {
+    "type": "soil",
+    "title": "SOD SOIL",
+    "description": "A screened blend of everything from clay to potting soil. Cheap and great for filling a large hole.",
+    "image": "/images/premium-topsoil-4.jpg"
+  }
+]

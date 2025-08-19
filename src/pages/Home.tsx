@@ -7,26 +7,26 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-800/80 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/40 to-green-800/30 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
+            backgroundImage: "url('/images/triple.jpg')"
           }}
         ></div>
         
         <div className="relative z-20 container mx-auto px-4 py-32">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Premium Landscape
               <span className="block text-green-300">Materials & Supply</span>
             </h1>
-            <p className="text-xl md:text-2xl text-green-100 mb-8 leading-relaxed max-w-2xl">
+            <p className="text-xl md:text-2xl text-green-100 mb-8 leading-relaxed max-w-2xl mx-auto">
               Transform your outdoor spaces with our high-quality mulch, stone, soil, and landscaping supplies. 
               Professional-grade materials for contractors and homeowners alike.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
               <Link 
                 to="/products"
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center space-x-2 transition-all duration-300 hover:scale-105 shadow-lg"
@@ -42,35 +42,45 @@ const Home = () => {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+            {/* Features row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-10 md:mt-14">
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-3">
                   <Truck className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-white font-semibold text-lg">Flat-Rate Delivery</h3>
-                  <p className="text-green-200">On orders over $200</p>
-                </div>
+                <h3 className="text-white font-semibold text-lg leading-tight mb-1">
+                  Flat-Rate Delivery
+                </h3>
+                <p className="text-green-200 text-sm leading-snug">
+                  On all orders
+                </p>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-3">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-white font-semibold text-lg">Fast Service</h3>
-                  <p className="text-green-200">Same day pickup available</p>
-                </div>
+                <h3 className="text-white font-semibold text-lg leading-tight mb-1">
+                  Fast Service
+                </h3>
+                <p className="text-green-200 text-sm leading-snug">
+                  Same day delivery available
+                </p>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-3">
                   <Award className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-white font-semibold text-lg">Quality Guaranteed</h3>
-                  <p className="text-green-200">Premium materials only</p>
-                </div>
+                <h3 className="text-white font-semibold text-lg leading-tight mb-1">
+                  Quality Guaranteed
+                </h3>
+                <p className="text-green-200 text-sm leading-snug">
+                  Premium materials only
+                </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -88,7 +98,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center group">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
                 <Users className="w-8 h-8 text-green-700" />
@@ -96,13 +106,13 @@ const Home = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
               <p className="text-gray-600">Knowledgeable staff ready to help with your project needs</p>
             </div>
-            <div className="text-center group">
+            {/* <div className="text-center group">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
                 <TreePine className="w-8 h-8 text-green-700" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Sustainable</h3>
               <p className="text-gray-600">Eco-friendly materials sourced from responsible suppliers</p>
-            </div>
+            </div> */}
             <div className="text-center group">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
                 <Truck className="w-8 h-8 text-green-700" />
@@ -137,14 +147,14 @@ const Home = () => {
             <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
               <div className="relative overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/4505458/pexels-photo-4505458.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
-                  alt="Premium Mulch"
+                  src="public\images\black-beauty.webp" 
+                  alt="Quality Mulch"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
-                  Premium Mulch
+                  Quality Mulch 
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   Enhance your gardens with our selection of organic mulches including hardwood, cedar, and colored varieties.
@@ -159,7 +169,7 @@ const Home = () => {
             <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
               <div className="relative overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                  src="public\images\CAN-SLATE.jpg" 
                   alt="Decorative Stone"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -181,17 +191,17 @@ const Home = () => {
             <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
               <div className="relative overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/226610/pexels-photo-226610.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
-                  alt="Seasonal Plants"
+                  src="public\images\586bd5ace8fdf2ad6bb31cab_Gro-Max-p-500x333-1.jpeg" 
+                  alt="Premium Soils"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
-                  Seasonal Plants
+                  Premium Soils
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  Fresh, healthy plants including perennials, annuals, shrubs, and trees for every season.
+                  Nutrient-rich soils perfect for all garden uses and plant types, from flowers and lawns to trees and bushes.
                 </p>
                 <Link to="/products" className="flex items-center space-x-2 text-green-700 font-semibold hover:text-green-800 transition-colors group">
                   <span>Learn More</span>
