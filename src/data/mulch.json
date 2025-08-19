@@ -1,0 +1,50 @@
+[
+  {
+    "type": "mulch",
+    "title": "Black Beauty",
+    "description": "Cedar/Pine blend dyed black (natural non-toxic dye.)",
+    "image": "/images/mulch/626fe64252006a45e0879d9f_black-beauty-01.jpg"
+  },
+  {
+    "type": "mulch",
+    "title": "Classic Cedar",
+    "description": "Natural, un-dyed cedar.",
+    "image": "/images/mulch/5830635238134dee0371ec2c_classic_cedar-p-500x333-2.jpeg"
+  },
+  {
+    "type": "mulch",
+    "title": "Fiber/Playground",
+    "description": "Engineered debarked wood from the saw mill. Playground approved!",
+    "image": "/images/mulch/586c0547aa82ce353a777415_Fibertop-p-500x334-1.jpeg"
+  },
+  {
+    "type": "mulch",
+    "title": "Mocha",
+    "description": "Cedar/Pine blend dyed brown (natural non-toxic dye.)",
+    "image": "/images/mulch/626fe5e81da70bd4871853f9_mocha-01.jpg"
+  },
+  {
+    "type": "mulch",
+    "title": "Red Devil",
+    "description": "Cedar dyed BRIGHT red (natural non-toxic dye.)",
+    "image": "/images/mulch/Bright-Red-Cedar-Mulch-300x199-2-1.jpg"
+  },
+  {
+    "type": "mulch",
+    "title": "Rustic Red (DISCONTINUED)",
+    "description": "Pine dyed red (natural non-toxic dye.) SORRY DISCONTINUED BY SUPPLIER",
+    "image": "/images/mulch/586c10ac99c097cd61ba7b7b_Enhance-Red-Pine-Bark.jpg"
+  },
+  {
+    "type": "mulch",
+    "title": "Shredded Pine",
+    "description": "Natural, un-dyed pine.",
+    "image": "/images/mulch/5830615d297b69db03041104_SPM-p-500x333-1.jpeg"
+  },
+  {
+    "type": "mulch",
+    "title": "Firewood",
+    "description": "Quality firewood for burning.",
+    "image": "/images/mulch/firewood.jpg"
+  }
+]

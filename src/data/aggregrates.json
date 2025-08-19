@@ -1,0 +1,68 @@
+[
+  {
+    "type": "aggregate",
+    "title": "3/4″ Clear",
+    "description": "Self compacting. For drainage and back fill.",
+    "image": "/images/aggregates/cleaaarrr.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "3/4″ Crusher Run",
+    "description": "Road base/top coat before asphalt. A sub base for concrete. Can be used for driveways.",
+    "image": "/images/aggregates/CURSHER.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "High Performance Base",
+    "description": "Under pavers/patio slabs. Back fill/sewer water main applications.",
+    "image": "/images/aggregates/hpB.webp"
+  },
+  {
+    "type": "aggregate",
+    "title": "Screenings",
+    "description": "Under pavers/patio slabs. Good for paths.",
+    "image": "/images/aggregates/SCREEN.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "1/4″ Pea Stone",
+    "description": "Dog runs. Playgrounds. Gardens/Firepits.",
+    "image": "/images/aggregates/4-PEA.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "3/8″ Pea Stone",
+    "description": "Dog runs. Playgrounds. Gardens/Firepits.",
+    "image": "/images/aggregates/38pea-1024x683.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "1-2″ Potato Stone",
+    "description": "Shoreline protection and drainage. Gardens.",
+    "image": "/images/aggregates/1-to-2-inch-potato-295x300-1.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "1-3″ Potato Stone",
+    "description": "Shoreline protection and drainage. Gardens.",
+    "image": "/images/aggregates/Potato-Stone.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "Concrete Blend",
+    "description": "A 3:2 mix of Gravel and Sand. Add a polymer and get concrete.",
+    "image": "/images/aggregates/CON-BLEND.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "Crushed (Recycled) Concrete",
+    "description": "A cheap fill option. Good for filling holes.",
+    "image": "/images/aggregates/CrushedConcrete-1024x683.jpg"
+  },
+  {
+    "type": "aggregate",
+    "title": "Concrete Sand",
+    "description": "Bedding layer. Making concrete. Amending soil (loosening up clay.) Chicken coops.",
+    "image": "/images/aggregates/concrete-sand-1.jpg"
+  }
+]

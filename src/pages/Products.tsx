@@ -4,12 +4,24 @@ import { ArrowRight, Filter } from "lucide-react";
 
 // Import your JSON data (example: soils)
 import soilsData from "../data/soils.json";
+import mulchData from "../data/mulch.json";
+import aggregateData from "../data/aggregrates.json"
 
-// Small helper to map JSON into product objects
-const loadProducts = (data, category) => {
+// Define what a Product looks like
+interface Product {
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  features?: string[];
+  price?: string;
+}
+
+// Helper to map JSON data
+const loadProducts = (data: any[], category: string): Product[] => {
   return data.map((item) => ({
     title: item.title,
-    category: category,
+    category,
     description: item.description,
     image: item.image,
     features: item.features || [],
@@ -23,7 +35,7 @@ const Products = () => {
   const categories = [
     { id: "all", name: "All Products" },
     { id: "mulch", name: "Mulch" },
-    { id: "stone", name: "Stone & Gravel" },
+    { id: "aggregate", name: "Aggregates" },
     { id: "soil", name: "Soils & Compost" },
     { id: "hardscape", name: "Hardscape" },
     { id: "tools", name: "Tools & Supplies" },
@@ -31,6 +43,8 @@ const Products = () => {
 
   // Load dynamic JSON data
   const soils = loadProducts(soilsData, "soil");
+  const mulch = loadProducts(mulchData, "mulch")
+  const aggregates = loadProducts(aggregateData, "aggregate")
 
   // Later you can add more JSON imports, e.g.
   // import mulchesData from "../data/mulches.json";
@@ -39,8 +53,8 @@ const Products = () => {
   // Merge them here
   const products = [
     ...soils,
-    // ...mulches,
-    // ...stones,
+    ...mulch,
+    ...aggregates,
     // ...etc
   ];
 
@@ -53,7 +67,7 @@ const Products = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Our Premium Products
           </h1>
@@ -67,7 +81,7 @@ const Products = () => {
 
       {/* Filter Section */}
       <section className="py-8 bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900">
               Browse by Category
@@ -98,7 +112,7 @@ const Products = () => {
 
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           {filteredProducts.length === 0 ? (
             <p className="text-center text-gray-600">
               No products found in this category.

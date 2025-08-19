@@ -74,7 +74,6 @@ const Footer = () => {
               <li>Premium Mulch</li>
               <li>Decorative Stone</li>
               <li>Premium Soils</li>
-              <li>Seasonal Plants</li>
               <li>Hardscape Materials</li>
               <li>Tools & Supplies</li>
             </ul>
@@ -86,22 +85,22 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-green-600 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">123 Garden Way, Landscape City, LC 12345</span>
+                <span className="text-gray-400 text-sm">163 Hwy 5 West, Dundas, ON L9H 5E2</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-green-600 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">(555) 123-4567</span>
+                <span className="text-gray-400 text-sm">(905) 689-8787</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-green-600 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">info@greenscapesupply.com</span>
+                <span className="text-gray-400 text-sm">info@thedirtdepot.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400 text-sm">
-                  <p>Mon-Fri: 7AM-6PM</p>
+                  <p>Mon-Fri: 7AM-5PM</p>
                   <p>Sat: 8AM-5PM</p>
-                  <p>Sun: 9AM-4PM</p>
+                  <p>Sun: CLOSED</p>
                 </div>
               </div>
             </div>
@@ -111,7 +110,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2024 GreenScape Supply. All rights reserved.
+              © 2025 The Dirt Depot. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
               <button className="hover:text-white transition-colors">Privacy Policy</button>

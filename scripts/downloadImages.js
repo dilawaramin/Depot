@@ -12,7 +12,7 @@ const jsonPath = path.join(__dirname, '../imageLinks.json');
 const images = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
 
 // ensure output dir exists
-const outDir = path.resolve(__dirname, '../images/mulch');
+const outDir = path.resolve(__dirname, '../public/images/aggregrates');
 if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir);
 }
