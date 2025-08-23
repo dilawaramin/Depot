@@ -6,6 +6,9 @@ import { ArrowRight, Filter } from "lucide-react";
 import soilsData from "../data/soils.json";
 import mulchData from "../data/mulch.json";
 import aggregateData from "../data/aggregrates.json"
+import decorativeData from "../data/decorative.json"
+import landscapingData from "../data/landscaping.json"
+import buildingData from "../data/building.json"
 
 // Define what a Product looks like
 interface Product {
@@ -37,14 +40,18 @@ const Products = () => {
     { id: "mulch", name: "Mulch" },
     { id: "aggregate", name: "Aggregates" },
     { id: "soil", name: "Soils & Compost" },
-    { id: "hardscape", name: "Hardscape" },
-    { id: "tools", name: "Tools & Supplies" },
+    { id: "decorative", name: "Decorative Stone"},
+    { id: "landscaping", name: "Landscaping Supplies" },
+    { id: "building", name: "Building Supplies" }
   ];
 
   // Load dynamic JSON data
   const soils = loadProducts(soilsData, "soil");
   const mulch = loadProducts(mulchData, "mulch")
   const aggregates = loadProducts(aggregateData, "aggregate")
+  const decorative = loadProducts(decorativeData, "decorative")
+  const landscaping = loadProducts(landscapingData, "landscaping")
+  const building = loadProducts(buildingData, "building")
 
   // Later you can add more JSON imports, e.g.
   // import mulchesData from "../data/mulches.json";
@@ -55,7 +62,9 @@ const Products = () => {
     ...soils,
     ...mulch,
     ...aggregates,
-    // ...etc
+    ...decorative,
+    ...landscaping,
+    ...building,
   ];
 
   const filteredProducts =

@@ -1,0 +1,56 @@
+[
+  {
+    "type": "building",
+    "title": "Bagged products: Concrete, mortar, poly sand, etc.",
+    "description": "",
+    "image": "/images/building/bagged-concrete-1024x738.jpeg"
+  },
+  {
+    "type": "building",
+    "title": "Blueskin Foundation Products",
+    "description": "",
+    "image": "/images/building/blueskin-1024x658.jpg"
+  },
+  {
+    "type": "building",
+    "title": "Builders Tubes",
+    "description": "",
+    "image": "/images/building/tubes-1024x768.jpg"
+  },
+  {
+    "type": "building",
+    "title": "Concrete Blocks",
+    "description": "",
+    "image": "/images/building/Untitled-design.png"
+  },
+  {
+    "type": "building",
+    "title": "Delta products",
+    "description": "",
+    "image": "/images/building/delta-894x1024.jpeg"
+  },
+  {
+    "type": "building",
+    "title": "Drainage Tile & Fittings",
+    "description": "",
+    "image": "/images/building/tile-1024x767.jpg"
+  },
+  {
+    "type": "building",
+    "title": "PVC Pipe & Fittings",
+    "description": "",
+    "image": "/images/building/pvc-943x1024.jpg"
+  },
+  {
+    "type": "building",
+    "title": "Rebar & Wire Mesh",
+    "description": "",
+    "image": "/images/building/rebar.jpg"
+  },
+  {
+    "type": "building",
+    "title": "Window Wells",
+    "description": "",
+    "image": "/images/building/wells-1024x768.jpg"
+  }
+]

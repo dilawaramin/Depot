@@ -1,0 +1,38 @@
+[
+  {
+    "type": "decorative-stone",
+    "title": "3/16-1/2″ RED CRUSHED BRICK",
+    "description": "",
+    "image": "/images/decorative/red-brick.jpg"
+  },
+  {
+    "type": "decorative-stone",
+    "title": "9/16″ WHITE DOLOMITE",
+    "description": "",
+    "image": "/images/decorative/dolomite.jpg"
+  },
+  {
+    "type": "decorative-stone",
+    "title": "RED & BLACK GRANITE",
+    "description": "",
+    "image": "/images/decorative/RED-BLACK-1.jpeg"
+  },
+  {
+    "type": "decorative-stone",
+    "title": "RENFREW RIVER ROCK",
+    "description": "",
+    "image": "/images/decorative/REN-1.jpg"
+  },
+  {
+    "type": "decorative-stone",
+    "title": "SILICA PEBBLES",
+    "description": "",
+    "image": "/images/decorative/SILICA.jpg"
+  },
+  {
+    "type": "decorative-stone",
+    "title": "CANADIAN SLATE",
+    "description": "",
+    "image": "/images/decorative/CAN-SLATE.jpg"
+  }
+]

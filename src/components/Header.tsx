@@ -26,22 +26,16 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-2">
-            {/* <div className="w-10 h-10 bg-green-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">D</span>
-            </div> */}
-              <div className="h-10 rounded-lg overflow-hidden flex items-center justify-center">
+            <div className="h-10 rounded-lg overflow-hidden flex items-center justify-center">
               <img 
                 src="/images/logo.jpg" 
                 alt="The Dirt Depot Logo" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <div>
-              {/* <h1 className="text-xl font-bold text-gray-900">The Dirt Depot</h1>
-              <p className="text-sm text-gray-600">Premium Landscape Materials</p> */}
-            </div>
           </Link>
 
+          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link 
               to="/" 
@@ -76,6 +70,14 @@ const Header = () => {
               Gallery
             </Link>
             <Link 
+              to="/yardage-calculator" 
+              className={`font-medium transition-colors ${
+                isActive('/yardage-calculator') ? 'text-green-700' : 'text-gray-700 hover:text-green-700'
+              }`}
+            >
+              Yardage Calculator
+            </Link>
+            <Link 
               to="/contact" 
               className={`font-medium transition-colors ${
                 isActive('/contact') ? 'text-green-700' : 'text-gray-700 hover:text-green-700'
@@ -97,7 +99,7 @@ const Header = () => {
             </div>
           </div>
 
-
+          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
@@ -147,6 +149,15 @@ const Header = () => {
                 Gallery
               </Link>
               <Link 
+                to="/yardage-calculator" 
+                onClick={() => setIsMenuOpen(false)}
+                className={`block w-full text-left font-medium py-2 transition-colors ${
+                  isActive('/yardage-calculator') ? 'text-green-700' : 'text-gray-700 hover:text-green-700'
+                }`}
+              >
+                Yardage Calculator
+              </Link>
+              <Link 
                 to="/contact" 
                 onClick={() => setIsMenuOpen(false)}
                 className={`block w-full text-left font-medium py-2 transition-colors ${
@@ -155,14 +166,16 @@ const Header = () => {
               >
                 Contact
               </Link>
+              
+              {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-gray-200 space-y-2">
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <Phone className="w-4 h-4" />
-                  <span>(555) 123-4567</span>
+                  <span>(905) 689-8787</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <MapPin className="w-4 h-4" />
-                  <span>123 Garden Way</span>
+                  <span>163 Hwy 5 West</span>
                 </div>
               </div>
             </div>

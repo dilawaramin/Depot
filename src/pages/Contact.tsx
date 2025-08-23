@@ -111,7 +111,7 @@ const Contact = () => {
               </div>
 
               {/* Services */}
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
                   <Truck className="w-12 h-12 text-green-600 mx-auto mb-3" />
                   <h4 className="font-semibold text-gray-900 mb-2">Delivery Service</h4>
@@ -122,7 +122,7 @@ const Contact = () => {
                   <h4 className="font-semibold text-gray-900 mb-2">Payment Options</h4>
                   <p className="text-sm text-gray-600">Cash, credit cards, and contractor accounts accepted</p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Contact Form */}
@@ -254,17 +254,29 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="bg-gray-200 rounded-2xl p-8 h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-green-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Visit Our Supply Yard</h3>
-              <p className="text-gray-600 mb-4">
-                163 Hwy 5 West, Dundas, ON L9H 5E2
-              </p>
-              <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                Get Directions
-              </button>
-            </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            {/* Embedded Google Map */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.661573678884!2d-79.9608!3d43.2668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c9c8d44cbbd7f%3A0x2e7e8c3f62c5ef3f!2s163%20ON-5%2C%20Dundas%2C%20ON%20L9H%205E2!5e0!3m2!1sen!2sca!4v1700000000000"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          {/* Get Directions Button */}
+          <div className="text-center mt-8">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=163+Hwy+5+West+Dundas+ON+L9H+5E2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-block"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
       </section>
