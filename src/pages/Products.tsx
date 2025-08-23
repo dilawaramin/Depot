@@ -28,7 +28,7 @@ const loadProducts = (data: any[], category: string): Product[] => {
     description: item.description,
     image: item.image,
     features: item.features || [],
-    price: item.price || "Contact for pricing",
+    price: item.price || "",
   }));
 };
 
@@ -139,9 +139,9 @@ const Products = () => {
                       alt={product.title}
                       className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {/* <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {product.price}
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="p-6">
@@ -166,10 +166,10 @@ const Products = () => {
                       ))}
                     </div>
 
-                    <button className="w-full bg-green-700 hover:bg-green-800 text-white py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
+                    {/* <button className="w-full bg-green-700 hover:bg-green-800 text-white py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
                       <span>Get Quote</span>
                       <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}
