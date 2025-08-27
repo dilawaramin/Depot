@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { X, Filter } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // Import JSON project data
 import projectsData from "../data/projects.json";
@@ -45,7 +46,22 @@ const Gallery = () => {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="pt-20">
+
+    <>
+      <Helmet>
+        <title>Gallery | Project Inspiration | The Dirt Depot</title>
+        <meta
+          name="description"
+          content="View our gallery of landscaping projects and materials supplied by The Dirt Depot. Get inspiration for your next residential or commercial project."
+        />
+        <meta property="og:title" content="Gallery | The Dirt Depot" />
+        <meta property="og:description" content="Explore our landscaping gallery for project inspiration." />
+        <meta property="og:image" content="/images/logo.jpg" />
+        <meta property="og:url" content="https://thedirtdepot.com/gallery" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -181,6 +197,7 @@ const Gallery = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

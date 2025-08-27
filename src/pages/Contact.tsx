@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Clock, Mail, Truck, CreditCard, Send, User, MessageSquare } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +45,22 @@ const handleSubmit = async (e) => {
 
 
   return (
-    <div className="pt-20">
+
+    <>
+      <Helmet>
+        <title>Contact Us | The Dirt Depot</title>
+        <meta
+          name="description"
+          content="Get in touch with The Dirt Depot. Visit our supply yard, call (905) 689-8787, or send us a message for expert advice and landscaping material orders."
+        />
+        <meta property="og:title" content="Contact The Dirt Depot" />
+        <meta property="og:description" content="Visit, call, or email The Dirt Depot for landscaping materials and expert advice." />
+        <meta property="og:image" content="/images/logo.jpg" />
+        <meta property="og:url" content="https://thedirtdepot.com/contact" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -313,6 +330,8 @@ const handleSubmit = async (e) => {
         </div>
       </section>
     </div>
+    </>
+
   );
 };
 

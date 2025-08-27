@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Calculator } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 type Shape = "rectangle" | "circle" | "triangle";
 
@@ -51,7 +52,23 @@ const YardageCalculator = () => {
   };
 
   return (
-    <div className="pt-20">
+
+    <>
+      <Helmet>
+        <title>Yardage Calculator | Estimate Materials | The Dirt Depot</title>
+        <meta
+          name="description"
+          content="Use our yardage calculator to estimate the amount of soil, mulch, or stone needed for your landscaping project. Quick and easy material estimation."
+        />
+        <meta property="og:title" content="Yardage Calculator | The Dirt Depot" />
+        <meta property="og:description" content="Estimate how much soil, mulch, or stone you need with our yardage calculator." />
+        <meta property="og:image" content="/images/logo.jpg" />
+        <meta property="og:url" content="https://thedirtdepot.com/yardage-calculator" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
+      
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
@@ -239,6 +256,7 @@ const YardageCalculator = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 // src/components/Products.jsx
 import React, { useState } from "react";
 import { ArrowRight, Filter } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // Import your JSON data (example: soils)
 import soilsData from "../data/soils.json";
@@ -73,7 +74,23 @@ const Products = () => {
       : products.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="pt-20">
+
+    <>
+      <Helmet>
+        <title>Products | Soil, Mulch, Stone & More | The Dirt Depot</title>
+        <meta
+          name="description"
+          content="Browse our selection of soil, mulch, aggregates, and landscaping products. Available for pickup or delivery across Hamilton and nearby areas."
+        />
+        <meta property="og:title" content="Products | The Dirt Depot" />
+        <meta property="og:description" content="Soil, mulch, stone, and more — pickup or delivery in Dundas, Ontario." />
+        <meta property="og:image" content="/images/logo.jpg" />
+        <meta property="og:url" content="https://thedirtdepot.com/products" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
+      
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
@@ -178,6 +195,7 @@ const Products = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

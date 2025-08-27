@@ -1,9 +1,24 @@
 import React from 'react';
 import { Users, TreePine, Star, Award, Shield } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
-    <div className="pt-20">
+    <>
+      <Helmet>
+        <title>About Us | The Dirt Depot</title>
+        <meta
+          name="description"
+          content="Learn about The Dirt Depot, a trusted provider of soil, mulch, stone, and landscape materials serving Hamilton, Ontario, and surrounding areas."
+        />
+        <meta property="og:title" content="About The Dirt Depot" />
+        <meta property="og:description" content="Trusted source for landscape materials in Dundas, Ontario." />
+        <meta property="og:image" content="/images/logo.jpg" />
+        <meta property="og:url" content="https://thedirtdepot.com/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
@@ -199,6 +214,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

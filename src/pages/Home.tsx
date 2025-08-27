@@ -1,10 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Truck, Clock, Award, Users, TreePine, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>The Dirt Depot | Premium Landscape Materials in Dundas, ON</title>
+        <meta
+          name="description"
+          content="The Dirt Depot supplies high-quality soil, mulch, stone, and landscaping materials in Hamilton and Southern Ontario. Pickup or delivery available for projects of all sizes."
+        />
+        <meta property="og:title" content="The Dirt Depot | Premium Landscape Materials" />
+        <meta property="og:description" content="Soil, mulch, stone, and landscaping supplies in Dundas, Ontario. Pickup or delivery available." />
+        <meta property="og:image" content="/images/logo.jpg" />
+        <meta property="og:url" content="https://thedirtdepot.com/" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
+      <div>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/40 to-green-800/30 z-10"></div>
@@ -249,6 +264,11 @@ const Home = () => {
         </div>
       </section>
     </div>
+  </>
+
+
+
+
   );
 };
 
