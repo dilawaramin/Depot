@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     // Send email via Resend
     const data = await resend.emails.send({
       from: 'Your Site <onboarding@resend.dev>', // you can use your own domain once verified
-      to: 'info@thedirtdepot.com',               // your receiving email
+      to: 'inquiry@thedirtdepot.com',               // your receiving email
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
