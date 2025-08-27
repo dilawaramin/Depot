@@ -17,19 +17,30 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      projectType: '',
-      message: ''
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
     });
-  };
+
+    if (response.ok) {
+      alert("Thank you for your message! We'll get back to you soon.");
+      setFormData({ name: '', email: '', phone: '', projectType: '', message: '' });
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Network error. Please try again.");
+  }
+};
+
 
   return (
     <div className="pt-20">
