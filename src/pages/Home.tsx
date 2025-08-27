@@ -147,7 +147,7 @@ const Home = () => {
             <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
               <div className="relative overflow-hidden">
                 <img 
-                  src="public\images\black-beauty.webp" 
+                  src="\images\black-beauty.webp" 
                   alt="Quality Mulch"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -169,7 +169,7 @@ const Home = () => {
             <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
               <div className="relative overflow-hidden">
                 <img 
-                  src="public\images\CAN-SLATE.jpg" 
+                  src="\images\CAN-SLATE.jpg" 
                   alt="Decorative Stone"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -191,7 +191,7 @@ const Home = () => {
             <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
               <div className="relative overflow-hidden">
                 <img 
-                  src="public\images\586bd5ace8fdf2ad6bb31cab_Gro-Max-p-500x333-1.jpeg" 
+                  src="\images\586bd5ace8fdf2ad6bb31cab_Gro-Max-p-500x333-1.jpeg" 
                   alt="Premium Soils"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />

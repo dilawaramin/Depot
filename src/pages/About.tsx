@@ -24,7 +24,7 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded in 1999, GreenScape Supply began as a small family business with a simple mission: 
+                Founded over 25 years ago, GreenScape Supply began as a small family business with a simple mission: 
                 to provide the highest quality landscape materials with unmatched customer service. What started 
                 in a modest yard has grown into the region's premier destination for professional landscapers 
                 and discerning homeowners.
@@ -157,28 +157,43 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Recognition & Certifications
+              Community Involvement
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our commitment to excellence has been recognized by industry organizations and customers alike.
+              At The Dirt Depot, we strongly believe in giving back to our community.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
             <div className="text-center p-8 bg-white rounded-xl shadow">
-              <Award className="w-16 h-16 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Best Landscape Supplier</h3>
-              <p className="text-gray-600">Landscape Contractors Association - 2023</p>
+              <img 
+                src="/images/community/cleanup.jpg" 
+                alt="Community Clean-up" 
+                className="w-full h-48 object-cover rounded-lg mb-6"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Community Clean-up</h3>
+              <p className="text-gray-600">Proud sponsor and volunteer of the Waterdown Community Clean-up</p>
             </div>
+            
             <div className="text-center p-8 bg-white rounded-xl shadow">
-              <TreePine className="w-16 h-16 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Sustainable Business</h3>
-              <p className="text-gray-600">Green Business Certification - 2022</p>
+              <img 
+                src="/images/community/easteregg.jpg" 
+                alt="Community Clean-up" 
+                className="w-full h-48 object-contain rounded-lg mb-6"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Easter Egg Hunt</h3>
+              <p className="text-gray-600">We proud sponsors of the Waterdown Easter Egg Hunt</p>
             </div>
+            
             <div className="text-center p-8 bg-white rounded-xl shadow">
-              <Users className="w-16 h-16 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Customer Choice</h3>
-              <p className="text-gray-600">Local Business Awards - 2021, 2022, 2023</p>
+              <img 
+                src="/images/community/rockton.jpg" 
+                alt="Community Clean-up" 
+                className="w-full h-48 object-cover rounded-lg mb-6"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Rockton World's Fair</h3>
+              <p className="text-gray-600">Proudly a Diamond sponsor of the Rockton World's Fair</p>
             </div>
           </div>
         </div>
