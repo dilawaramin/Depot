@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Clock, Mail, Truck, CreditCard, Send, User, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Clock, Mail, Send, User, MessageSquare } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
 
