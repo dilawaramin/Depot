@@ -1,18 +1,1 @@
-{
-  "builds": [
-    { "src": "api/**/*.js", "use": "@vercel/node" },
-    { "src": "package.json", "use": "@vercel/static-build" }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/[^.]+", "dest": "/", "status": 200 }
-  ],
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    }
-  },
-  "staticBuild": {
-    "distDir": "dist"
-  }
-}
+{ "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] }
