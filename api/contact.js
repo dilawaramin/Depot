@@ -12,9 +12,9 @@ export default async function handler(req, res) {
 
     // Send email via Resend with reply_to set
     const data = await resend.emails.send({
-      from: 'The Dirt Depot <onboarding@resend.dev>',  // keep Resend domain for now
+      from: 'The Dirt Depot Contact <no-reply@resend.dev>',  // keep Resend domain for now
       to: 'inquiry@thedirtdepot.com',                  // where you receive inquiries
-      reply_to: email,                                 // customer's email
+      replyTo: email,                                 // customer's email
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
