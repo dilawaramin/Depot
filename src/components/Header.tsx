@@ -1,4 +1,3 @@
-// Header.OpaqueThenScrolledSemi.tsx
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MapPin } from 'lucide-react';
@@ -21,16 +20,21 @@ const Header: React.FC = () => {
     { path: '/products', label: 'Products' },
     { path: '/gallery', label: 'Gallery' },
     { path: '/yardage-calculator', label: 'Yardage' },
+    { path: '/bins', label: 'Bins' }, // <-- added
     { path: '/contact', label: 'Contact' },
   ];
 
+  // UPDATED linkClass function for desktop
   const linkClass = (path: string) =>
-    `font-medium text-base md:text-lg leading-6 transition-colors ${
-      location.pathname === path ? 'text-white font-semibold' : 'text-white/95 hover:text-white'
+    `px-3 py-2 rounded-lg font-medium text-base md:text-lg leading-6 transition-colors transition-all duration-200 
+    ${
+      location.pathname === path 
+        ? 'text-green-900 bg-white font-semibold shadow-sm' // Active: White background, dark text
+        : 'text-white/95 hover:text-green-900 hover:bg-white/70' // Hover: Lighter, semi-transparent background, dark text
     }`;
 
   // Classes used for header and mobile menu background:
-  const topBgClass = 'bg-green-700';      // fully opaque at top
+  const topBgClass = 'bg-green-700';       // fully opaque at top
   const scrolledBgClass = 'bg-green-700/80'; // slightly more transparent when scrolled
 
   return (
@@ -42,11 +46,11 @@ const Header: React.FC = () => {
               <div className="h-10 w-auto rounded-md p-1 bg-white/95 shadow-sm flex items-center">
                 <img src="/images/logo.jpg" alt="The Dirt Depot Logo" className="h-8 object-contain" />
               </div>
-              <span className="text-white font-semibold hidden md:inline">The Dirt Depot</span>
+              <span className="text-white font-semibold hidden md:inline"></span>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-2"> {/* reduced space-x for better fit with padding */}
               {navItems.map((item) => (
                 <Link key={item.path} to={item.path} className={linkClass(item.path)}>
                   {item.label}
@@ -79,17 +83,19 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className={`lg:hidden border-green-600`}>
-            <div className="px-4 py-6 space-y-4 text-white">
+          // Added background to mobile menu to ensure contrast
+          <div className={`lg:hidden border-green-600 ${topBgClass}`}>
+            <div className="px-4 py-6 space-y-2 text-white"> {/* reduced space-y for better fit with padding */}
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  /* === ONLY CHANGE ===:
-                     match original spacing/size/position: text-base + py-2 + full-width left-align */
-                  className={`block w-full text-left font-medium text-base py-2 transition-colors ${
-                    location.pathname === item.path ? 'text-white font-semibold' : 'text-white/95 hover:text-white'
+                  // UPDATED mobile link classes
+                  className={`block w-full text-left font-medium text-base px-3 py-2 rounded-md transition-colors transition-all duration-200 ${
+                    location.pathname === item.path 
+                      ? 'text-green-900 bg-white font-semibold' // Active: White background, dark text
+                      : 'text-white/95 hover:text-green-900 hover:bg-white/70' // Hover: Lighter, semi-transparent background, dark text
                   }`}
                 >
                   {item.label}
@@ -115,6 +121,238 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
+
+// import React, { useState, useEffect } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+// import { Menu, X, Phone, MapPin } from 'lucide-react';
+
+// const Header: React.FC = () => {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+//   const [isScrolled, setIsScrolled] = useState(false);
+//   const location = useLocation();
+
+//   useEffect(() => {
+//     const handleScroll = () => setIsScrolled(window.scrollY > 50);
+//     handleScroll(); // set initial state if page is loaded scrolled
+//     window.addEventListener('scroll', handleScroll);
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, []);
+
+//   const navItems = [
+//     { path: '/', label: 'Home' },
+//     { path: '/about', label: 'About' },
+//     { path: '/products', label: 'Products' },
+//     { path: '/gallery', label: 'Gallery' },
+//     { path: '/yardage-calculator', label: 'Yardage' },
+//     { path: '/bins', label: 'Bins' }, // <-- added
+//     { path: '/contact', label: 'Contact' },
+//   ];
+
+//   const linkClass = (path: string) =>
+//     `font-medium text-base md:text-lg leading-6 transition-colors ${
+//       location.pathname === path ? 'text-white font-semibold' : 'text-white/95 hover:text-white'
+//     }`;
+
+//   // Classes used for header and mobile menu background:
+//   const topBgClass = 'bg-green-700';      // fully opaque at top
+//   const scrolledBgClass = 'bg-green-700/80'; // slightly more transparent when scrolled
+
+//   return (
+//     <>
+//       <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? scrolledBgClass : topBgClass}`}>
+//         <div className="container mx-auto px-4">
+//           <div className="flex items-center justify-between h-20">
+//             <Link to="/" className="flex items-center space-x-3">
+//               <div className="h-10 w-auto rounded-md p-1 bg-white/95 shadow-sm flex items-center">
+//                 <img src="/images/logo.jpg" alt="The Dirt Depot Logo" className="h-8 object-contain" />
+//               </div>
+//               <span className="text-white font-semibold hidden md:inline"></span>
+//             </Link>
+
+//             {/* Desktop Nav */}
+//             <nav className="hidden lg:flex items-center space-x-8">
+//               {navItems.map((item) => (
+//                 <Link key={item.path} to={item.path} className={linkClass(item.path)}>
+//                   {item.label}
+//                 </Link>
+//               ))}
+//             </nav>
+
+//             {/* Contact Info (right side) */}
+//             <div className="hidden lg:flex flex-col items-end text-sm text-white/95">
+//               <div className="flex items-center space-x-2">
+//                 <Phone className="w-4 h-4" />
+//                 <span>(905) 689-8787</span>
+//               </div>
+//               <div className="flex items-center space-x-2">
+//                 <MapPin className="w-4 h-4" />
+//                 <span>163 Hwy 5 West</span>
+//               </div>
+//             </div>
+
+//             {/* Mobile Menu Toggle */}
+//             <button
+//               onClick={() => setIsMenuOpen(!isMenuOpen)}
+//               className="lg:hidden p-2 rounded-md hover:bg-white/10 transition-colors"
+//               aria-label="toggle menu"
+//             >
+//               {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Mobile Menu */}
+//         {isMenuOpen && (
+//           <div className={`lg:hidden border-green-600`}>
+//             <div className="px-4 py-6 space-y-4 text-white">
+//               {navItems.map((item) => (
+//                 <Link
+//                   key={item.path}
+//                   to={item.path}
+//                   onClick={() => setIsMenuOpen(false)}
+//                   /* === ONLY CHANGE ===:
+//                      match original spacing/size/position: text-base + py-2 + full-width left-align */
+//                   className={`block w-full text-left font-medium text-base py-2 transition-colors ${
+//                     location.pathname === item.path ? 'text-white font-semibold' : 'text-white/95 hover:text-white'
+//                   }`}
+//                 >
+//                   {item.label}
+//                 </Link>
+//               ))}
+
+//               <div className="pt-4 border-t border-green-600 text-sm text-white/90">
+//                 <div className="flex items-center space-x-2">
+//                   <Phone className="w-4 h-4" />
+//                   <span>(905) 689-8787</span>
+//                 </div>
+//                 <div className="flex items-center space-x-2">
+//                   <MapPin className="w-4 h-4" />
+//                   <span>163 Hwy 5 West</span>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </header>
+//     </>
+//   );
+// };
+
+// export default Header;
+
+// const Header: React.FC = () => {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+//   const [isScrolled, setIsScrolled] = useState(false);
+//   const location = useLocation();
+
+//   useEffect(() => {
+//     const handleScroll = () => setIsScrolled(window.scrollY > 50);
+//     handleScroll(); // set initial state if page is loaded scrolled
+//     window.addEventListener('scroll', handleScroll);
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, []);
+
+//   const navItems = [
+//     { path: '/', label: 'Home' },
+//     { path: '/about', label: 'About' },
+//     { path: '/products', label: 'Products' },
+//     { path: '/gallery', label: 'Gallery' },
+//     { path: '/yardage-calculator', label: 'Yardage' },
+//     { path: '/contact', label: 'Contact' },
+//   ];
+
+//   const linkClass = (path: string) =>
+//     `font-medium text-base md:text-lg leading-6 transition-colors ${
+//       location.pathname === path ? 'text-white font-semibold' : 'text-white/95 hover:text-white'
+//     }`;
+
+//   // Classes used for header and mobile menu background:
+//   const topBgClass = 'bg-green-700';      // fully opaque at top
+//   const scrolledBgClass = 'bg-green-700/80'; // slightly more transparent when scrolled
+
+//   return (
+//     <>
+//       <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? scrolledBgClass : topBgClass}`}>
+//         <div className="container mx-auto px-4">
+//           <div className="flex items-center justify-between h-20">
+//             <Link to="/" className="flex items-center space-x-3">
+//               <div className="h-10 w-auto rounded-md p-1 bg-white/95 shadow-sm flex items-center">
+//                 <img src="/images/logo.jpg" alt="The Dirt Depot Logo" className="h-8 object-contain" />
+//               </div>
+//               <span className="text-white font-semibold hidden md:inline">The Dirt Depot</span>
+//             </Link>
+
+//             {/* Desktop Nav */}
+//             <nav className="hidden lg:flex items-center space-x-8">
+//               {navItems.map((item) => (
+//                 <Link key={item.path} to={item.path} className={linkClass(item.path)}>
+//                   {item.label}
+//                 </Link>
+//               ))}
+//             </nav>
+
+//             {/* Contact Info (right side) */}
+//             <div className="hidden lg:flex flex-col items-end text-sm text-white/95">
+//               <div className="flex items-center space-x-2">
+//                 <Phone className="w-4 h-4" />
+//                 <span>(905) 689-8787</span>
+//               </div>
+//               <div className="flex items-center space-x-2">
+//                 <MapPin className="w-4 h-4" />
+//                 <span>163 Hwy 5 West</span>
+//               </div>
+//             </div>
+
+//             {/* Mobile Menu Toggle */}
+//             <button
+//               onClick={() => setIsMenuOpen(!isMenuOpen)}
+//               className="lg:hidden p-2 rounded-md hover:bg-white/10 transition-colors"
+//               aria-label="toggle menu"
+//             >
+//               {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Mobile Menu */}
+//         {isMenuOpen && (
+//           <div className={`lg:hidden border-green-600`}>
+//             <div className="px-4 py-6 space-y-4 text-white">
+//               {navItems.map((item) => (
+//                 <Link
+//                   key={item.path}
+//                   to={item.path}
+//                   onClick={() => setIsMenuOpen(false)}
+//                   /* === ONLY CHANGE ===:
+//                      match original spacing/size/position: text-base + py-2 + full-width left-align */
+//                   className={`block w-full text-left font-medium text-base py-2 transition-colors ${
+//                     location.pathname === item.path ? 'text-white font-semibold' : 'text-white/95 hover:text-white'
+//                   }`}
+//                 >
+//                   {item.label}
+//                 </Link>
+//               ))}
+
+//               <div className="pt-4 border-t border-green-600 text-sm text-white/90">
+//                 <div className="flex items-center space-x-2">
+//                   <Phone className="w-4 h-4" />
+//                   <span>(905) 689-8787</span>
+//                 </div>
+//                 <div className="flex items-center space-x-2">
+//                   <MapPin className="w-4 h-4" />
+//                   <span>163 Hwy 5 West</span>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </header>
+//     </>
+//   );
+// };
+
+// export default Header;
 
 
 
