@@ -7,6 +7,7 @@ import About from './pages/About';
 import Products from './pages/Products';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Bins from './pages/Bins';
 import YardageCalculator from './pages/YardageCalculator';
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/bins" element={<Bins />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/yardage-calculator" element={<YardageCalculator />} />

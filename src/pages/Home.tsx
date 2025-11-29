@@ -34,7 +34,7 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Premium Landscape
-              <span className="block text-green-300">Materials & Supply</span>
+              <span className="block text-green-500">Materials & Supply</span>
             </h1>
             <p className="text-xl md:text-2xl text-green-100 mb-8 leading-relaxed max-w-2xl mx-auto">
               Transform your outdoor spaces with our high-quality mulch, stone, soil, and landscaping supplies. 
