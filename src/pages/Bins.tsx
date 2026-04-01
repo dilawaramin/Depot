@@ -2,6 +2,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import PageHero from "../components/PageHero";
 
 const Bins = () => {
   return (
@@ -19,14 +20,12 @@ const Bins = () => {
       </Helmet>
 
       <div className="pt-20">
-        <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">Bins & Rentals</h1>
-            <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-              We operate <strong>Bruce&apos;s Bins</strong>, our dedicated bin rental service for quick, easy disposal.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          title="Bins & Rentals"
+          description="We operate Bruce's Bins, our dedicated bin rental service for quick, easy disposal."
+          image="/images/bins.webp"
+          backgroundPosition="center 75%"
+        />
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 lg:px-12">

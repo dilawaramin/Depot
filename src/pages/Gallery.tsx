@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { X, Filter } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import PageHero from "../components/PageHero";
 
 // Import JSON project data
 import projectsData from "../data/projects.json";
@@ -62,18 +63,12 @@ const Gallery = () => {
       </Helmet>
 
       <div className="pt-20">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Customer Project Showcase
-          </h1>
-          <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-            Explore real projects created by landscapers, homeowners, and
-            businesses using our premium materials. Email us with pictures of your project for a chance to be featured!
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Customer Project Showcase"
+        description="Explore real projects created by landscapers, homeowners, and businesses using our premium materials. Email us with pictures of your project for a chance to be featured!"
+        image="/images/gallery/luschpatio.jpg"
+        backgroundPosition="center 55%"
+      />
 
       {/* Filter Section */}
       <section className="py-8 bg-white border-b border-gray-200">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, TreePine, Star, Award, Shield } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
+import PageHero from "../components/PageHero";
 
 const About = () => {
   return (
@@ -19,16 +20,12 @@ const About = () => {
       </Helmet>
 
       <div className="pt-20">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">About The Dirt Depot</h1>
-          <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-            Your trusted partner in landscape excellence for over 25 years, providing premium materials 
-            and exceptional service to professionals and homeowners alike.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="About The Dirt Depot"
+        description="Your trusted partner in landscape excellence for over 25 years, providing premium materials and exceptional service to professionals and homeowners alike."
+        image="/images/about/truckloader.jpg"
+        backgroundPosition="center 65%"
+      />
 
       {/* Our Story */}
       <section className="py-20 bg-white">
@@ -39,7 +36,7 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded over 25 years ago, GreenScape Supply began as a small family business with a simple mission: 
+                Founded over 25 years ago, The Dirt Depot began as a small family business with a simple mission:
                 to provide the highest quality landscape materials with unmatched customer service. What started 
                 in a modest yard has grown into the region's premier destination for professional landscapers 
                 and discerning homeowners.

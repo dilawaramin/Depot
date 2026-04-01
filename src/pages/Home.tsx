@@ -41,7 +41,7 @@ const Home = () => {
               Professional-grade materials for contractors and homeowners alike.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
+            <div className="flex flex-col items-center sm:flex-row sm:items-stretch gap-4 mb-12 justify-center">
               <Link 
                 to="/products"
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center space-x-2 transition-all duration-300 hover:scale-105 shadow-lg"
@@ -247,7 +247,7 @@ const Home = () => {
             Whether you're a professional contractor or a weekend warrior, we're here to help you 
             find the perfect materials for your project. Visit us today or call for a quote.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col items-center sm:flex-row sm:items-stretch gap-4 justify-center">
             <Link 
               to="/contact"
               className="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ArrowRight, Filter } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import PageHero from "../components/PageHero";
 
 // Import your JSON data (example: soils)
 import soilsData from "../data/soils.json";
@@ -91,19 +92,12 @@ const Products = () => {
 
       
       <div className="pt-20">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Our Premium Products
-          </h1>
-          <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-            From foundational materials to finishing touches, we supply
-            everything needed to create exceptional outdoor spaces that exceed
-            expectations.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Our Premium Products"
+        description="From foundational materials to finishing touches, we supply everything needed to create exceptional outdoor spaces that exceed expectations."
+        image="/images/aggregates/38pea-1024x683.jpg"
+        backgroundPosition="center 58%"
+      />
 
       {/* Filter Section */}
       <section className="py-8 bg-white border-b border-gray-200">

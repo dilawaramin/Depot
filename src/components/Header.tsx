@@ -46,6 +46,7 @@ const Header: React.FC = () => {
 
   const topBgClass = 'bg-green-700';
   const scrolledBgClass = 'bg-green-700/80';
+  const headerBgClass = isScrolled && !isMenuOpen ? scrolledBgClass : topBgClass;
 
   return (
     // 1. New wrapper: The entire header system is fixed to the top of the viewport (z-index 50)
@@ -57,7 +58,7 @@ const Header: React.FC = () => {
       {/* 3. The main Header component sits directly below the banner. 
              If the banner is NOT visible, the header sits at the top of the fixed wrapper.
              The position is implicit (static/relative) within the fixed div. */}
-      <header className={`w-full transition-all duration-300 ${isScrolled ? scrolledBgClass : topBgClass}`}>
+      <header className={`w-full transition-all duration-300 ${headerBgClass}`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* ... (rest of your existing header content) ... */}
@@ -102,7 +103,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className={`lg:hidden border-green-600 ${topBgClass}`}>
+          <div className={`lg:hidden border-green-600 ${headerBgClass}`}>
             <div className="px-4 py-6 space-y-2 text-white">
               {navItems.map((item) => (
                 <Link

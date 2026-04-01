@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Clock, Mail, Send, User, MessageSquare } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
+import PageHero from "../components/PageHero";
 
 
 const Contact = () => {
@@ -61,16 +62,12 @@ const handleSubmit = async (e) => {
       </Helmet>
 
       <div className="pt-20">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-            Visit our supply yard, get expert advice, or arrange delivery. 
-            Our team is ready to help with projects of any size.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Contact Us"
+        description="Visit our supply yard, get expert advice, or arrange delivery. Our team is ready to help with projects of any size."
+        image="/images/about/items.jpg"
+        backgroundPosition="center 38%"
+      />
 
       {/* Contact Information & Form */}
       <section className="py-20 bg-white">

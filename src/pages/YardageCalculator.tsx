@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Calculator } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import PageHero from "../components/PageHero";
 
 type Shape = "rectangle" | "circle" | "triangle";
 
@@ -69,18 +70,12 @@ const YardageCalculator = () => {
 
       
       <div className="pt-20">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-green-800 to-green-700 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Yardage Calculator
-          </h1>
-          <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed">
-            Calculate how much material you need for your landscaping project.
-            Choose a shape, enter dimensions, and get an instant estimate.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Yardage Calculator"
+        description="Calculate how much material you need for your landscaping project. Choose a shape, enter dimensions, and get an instant estimate."
+        image="/images/heroes/yardage-measuring.jpg"
+        backgroundPosition="center 45%"
+      />
 
       {/* Shape Selector Section */}
       <section className="py-8 bg-white border-b border-gray-200">
