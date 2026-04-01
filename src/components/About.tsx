@@ -12,7 +12,7 @@ const About = () => {
               <span className="block text-green-700">Landscape Excellence</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              For over 25 years, GreenScape Supply has been the premier destination for professional 
+              For over 25 years, The Dirt Depot has been the premier destination for professional 
               landscapers and homeowners seeking the highest quality materials for their outdoor projects.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
