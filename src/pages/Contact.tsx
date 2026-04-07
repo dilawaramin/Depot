@@ -128,7 +128,7 @@ const handleSubmit = async (e) => {
                     <h3 className="font-semibold text-gray-900 mb-1 text-lg">Business Hours</h3>
                     <div className="text-gray-600 space-y-1">
                       <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                      <p>Saturday: CLOSED</p>
+                      <p>Saturday: 8:00 AM - 4:00 PM</p>
                       <p>Sunday: CLOSED</p>
                     </div>
                   </div>
